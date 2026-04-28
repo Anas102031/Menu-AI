@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍽️ Smart Restaurant AI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>🍽️ Spice Garden Restaurant</h1>
+        <p>AI-Powered Assistant</p>
+      </header>
+
+      <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot-message">
+            <div class="avatar">🤖</div>
+            <div class="content">
+              Welcome to Spice Garden! I can help you with:
+              <ul>
+                <li>📋 Viewing our menu</li>
+                <li>🔍 Searching for dishes</li>
+                <li>💰 Price information</li>
+                <li>📍 Restaurant details</li>
+              </ul>
+              How can I assist you today?
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-actions">
+          <button onclick="sendQuick('Show me breakfast menu')">
+            🌅 Breakfast
+          </button>
+          <button onclick="sendQuick('What is for lunch?')">☀️ Lunch</button>
+          <button onclick="sendQuick('Show dinner menu')">🌙 Dinner</button>
+          <button onclick="sendQuick('Restaurant info')">ℹ️ Info</button>
+        </div>
+
+        <div class="input-area">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Ask about our menu..."
+            onkeypress="handleKey(event)"
+          />
+          <button onclick="sendMessage()" id="sendBtn">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
